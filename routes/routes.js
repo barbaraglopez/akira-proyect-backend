@@ -10,7 +10,7 @@ const router = express.Router()
 
 router.post("/crear",createUser);
 router.get("/traer",getAllUsers);
-router.patch("/actualizar",updateUser);
+router.put("/actualizar",updateUser);
 router.delete("/eliminar", deleteUser);
 
 export default router

@@ -23,18 +23,19 @@ export const getAllUsers = async (req, res) => {
 };
 
 //Actualizar un registro
-export const updateUser = async(req,res)=>{
-    try {
-        await userModel.update(req.body,{
-            where:{ id: req.params.id}
-        })
-        res.json({
-            "message":"!Regristro actualizado correctamente!"
-        })
-    } catch (error) {
-        res.json({message:error.message})
-    }
-}
+export const updateUser = async (req, res) => {
+  try {
+    await userModel.update({
+      where: { id: req.params.id },
+    });
+    res.json({
+      message: "!Regristro actualizado correctamente!",
+    });
+  } catch {
+    res.json({ message: error.message });
+  }
+};
+
 
 //Eliminar un registro
 export const deleteUser = async(req, res) =>{
